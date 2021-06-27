@@ -1,14 +1,14 @@
-import Home from "../../views/Home";
-
 export default [
     {
         path: '/',
-        name: 'Home',
-        component: Home
+        redirect: {name: 'home'},
     },
     {
         path: '/home',
-        name: 'Home',
-        component: Home
+        name: 'home',
+        component: () => import('../../views/Home'),
+        meta: {
+            layout: () => import('../../layouts/DefaultLayout'),
+        }
     },
 ];

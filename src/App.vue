@@ -1,7 +1,5 @@
 <template>
-    <div id="app">
-        <component :is="layout" />
-    </div>
+    <component :is="layout" />
 </template>
 
 <script>

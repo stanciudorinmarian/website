@@ -1,17 +1,19 @@
 <template>
     <v-app>
-        <app-navigation-bar />
+        <app-navigation-bar/>
 
         <v-main>
-            <router-view />
+            <router-view/>
         </v-main>
     </v-app>
 </template>
 
-<script>
-    import AppNavigationBar from "../components/AppNavigationBar/AppNavigationBar";
-    export default {
+<script lang="ts">
+    const AppNavigationBar = () => import('../components/AppNavigationBar/AppNavigationBar');
+    import Vue from 'vue';
+
+    export default Vue.extend({
         name: "DefaultLayout",
         components: {AppNavigationBar}
-    };
+    });
 </script>

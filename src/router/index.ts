@@ -5,7 +5,7 @@ Vue.use(VueRouter);
 
 let routes = [];
 
-const routeFiles = require.context('./routes', true, /\.route.js$/i);
+const routeFiles = require.context('./routes', true, /\.route.ts$/i);
 
 routeFiles.keys().map((key) => {
     const route = routeFiles(key).default;

@@ -1,11 +1,13 @@
 <template>
-    <component :is="layout" />
+    <component :is="layout"/>
 </template>
 
-<script>
+<script lang="ts">
+    import Vue from 'vue';
+
     const DefaultLayout = () => import('./layouts/DefaultLayout');
 
-    export default {
+    export default Vue.extend({
         name: "App",
 
         computed: {
@@ -19,5 +21,5 @@
                 return DefaultLayout;
             },
         }
-    };
+    });
 </script>

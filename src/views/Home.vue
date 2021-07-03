@@ -1,15 +1,16 @@
 <template>
-  <hello-world />
+    <hello-world/>
 </template>
 
-<script>
-    import HelloWorld from '../components/HelloWorld';
+<script lang="ts">
+    const HelloWorld = () => import('../components/HelloWorld');
+    import Vue from "vue";
 
-    export default {
+    export default Vue.extend({
         name: 'Home',
 
         components: {
             HelloWorld,
         },
-    };
+    });
 </script>
